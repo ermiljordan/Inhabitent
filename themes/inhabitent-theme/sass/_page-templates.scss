@@ -3,3 +3,10 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+.hero-banner {
+  background-image: url('../../assets/home-hero.jpg');
+  background-size: cover, cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}

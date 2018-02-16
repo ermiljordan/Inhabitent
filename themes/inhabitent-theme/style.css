@@ -659,6 +659,15 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.hero-banner {
+  background-image: url("../../assets/home-hero.jpg");
+  background-size: cover, cover;
+  height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
 .home .header-background {
   background: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #e1e1e1;

@@ -35,3 +35,14 @@ function inhabitent_login_logo() { ?>
 <?php }
 add_filter('login_enqueue_scripts', 'inhabitent_login_logo');
 add_filter('logo_headertitle', 'inhabitent_login_title');
+
+// THIS WILL PULL THE IMAGE ON THE FRONT PAGE
+// function inhabitent_hero_banner() {
+// 	if ( ! is_page_templates ( 'front-page.php ') ) {
+// 		return;
+// 	}
+// }
+// $image = CFS() ->get( 'hero_banner' );
+// if (! $image )  {
+// 	return;
+// }
