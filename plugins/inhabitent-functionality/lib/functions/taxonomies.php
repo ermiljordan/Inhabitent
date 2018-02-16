@@ -11,7 +11,7 @@ function inhabitent_tax_product_type() {
 	$labels = array(
 		'name'                       => 'Product Types',
 		'singular_name'              => 'Product Type',
-		'menu_name'                  => 'Product Type',
+		'menu_name'                  => 'Product Types',
 		'all_items'                  => 'All Product Types',
 		'parent_item'                => 'Parent Product Type',
 		'parent_item_colon'          => 'Parent Product Type:',
