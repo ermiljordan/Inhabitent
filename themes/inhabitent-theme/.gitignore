@@ -3,13 +3,15 @@
 !.gitignore
 !plugins/
 !themes/
-!uploads
+!uploads/
 !README.md
 
 # Ignore everything in "themes" except the active theme. #
 themes/*
 !themes/inhabitent-theme
 
+# Ignore packages #
+themes/inhabitent-theme/node_modules/
 
 # Ignore OS files #
 # =============== #
