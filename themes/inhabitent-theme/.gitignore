@@ -6,7 +6,7 @@
 !uploads
 !README.md
 
-# Ignore everything in "theme" ecept the active theme. #
+# Ignore everything in "theme" except the active theme. #
 themes/*
 !themes/inhabitent-theme
 
