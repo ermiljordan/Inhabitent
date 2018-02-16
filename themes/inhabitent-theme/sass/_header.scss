@@ -1,0 +1,22 @@
+.home .header-background {
+  background: hsla(0,0%,100%,.8);
+  border-bottom: 1px solid #e1e1e1;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.logo-tent-white {
+  height: 45px;
+}
+.menu .page-item {
+  display: flex;
+  
+}

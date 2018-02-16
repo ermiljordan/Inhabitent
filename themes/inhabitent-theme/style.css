@@ -3,7 +3,7 @@ Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
 Author: Ermilson Jordan
 Author URI: 
-Description: A WordPress theme for a ecomerce site
+Description: A WordPress theme for an ecomerce
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -656,3 +656,25 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home .header-background {
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #e1e1e1;
+  width: 100%;
+  position: fixed;
+  z-index: 1; }
+
+.header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 50px;
+  width: 1120px;
+  margin: 0 auto; }
+
+.logo-tent-white {
+  height: 45px; }
+
+.menu .page-item {
+  display: -ms-flexbox;
+  display: flex; }
