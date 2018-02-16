@@ -449,10 +449,13 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    padding-left: 1.5rem;
+    text-transform: uppercase; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: #248a83; }
 
 /* Small menu. */
 .menu-toggle,
@@ -675,6 +678,8 @@ object {
 .logo-tent-white {
   height: 45px; }
 
-.menu .page-item {
-  display: -ms-flexbox;
-  display: flex; }
+.menu {
+  padding-top: .5rem; }
+
+.main-navigation .page-item {
+  padding-left: 5rem; }
