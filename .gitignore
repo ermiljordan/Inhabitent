@@ -54,3 +54,7 @@ node_modules/
 error_log
 access_log
 .vscode
+# Ignore everything in "plugins" except certain plugins. #
+plugins/*
+!plugins/inhabitent-functionality/
+!plugins/business-hours-widget/
