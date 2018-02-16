@@ -2,7 +2,7 @@
 /**
  * Custom functions that act independently of the theme templates.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_theme
  */
 
 /**
@@ -20,3 +20,18 @@ function red_starter_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
+
+// This changes the Logo on the login.
+function inhabitent_login_logo() { ?>
+	<style type="text/css">
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/logos/inhabitent-logo-text-dark.svg);
+			padding-bottom: 30px;
+			background-size: 310px !important;
+			width: 310px !important;
+			background-position: bottom !important;
+		}
+	</style>
+<?php }
+add_filter('login_enqueue_scripts', 'inhabitent_login_logo');
+add_filter('logo_headertitle', 'inhabitent_login_title');
