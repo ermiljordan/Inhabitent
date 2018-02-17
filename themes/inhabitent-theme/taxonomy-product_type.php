@@ -25,15 +25,19 @@ get_header(); ?>
       
         <div class="product-post">
           <?php if( has_post_thumbnail() ); ?>
-          <a href="<?php echo get_post_permalink() ?>"><div class="product-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div></a>
+          <a href=<?php echo get_post_permalink() ?>>
 
-
+						<div class="product-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
+					</a>
         </div>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
+			<div class="product-title-section">
+				<h2 class="entry-title">
+					<?php the_title(); ?>
+				</h2>
+					<span class="price"><?php echo CFS()->get ( 'price' ); ?></span>
+			</div>
+			
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -47,5 +51,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
