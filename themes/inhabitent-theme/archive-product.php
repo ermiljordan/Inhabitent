@@ -36,21 +36,28 @@ get_header(); ?>
 		</div>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			
+		<section>
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+				<div>
+					<?php if( has_post_thumbnail() ): ?>
+						<a href=<?php echo get_post_permalink() ?>>
+						<div><?php the_post_thumbnail( 'large' ); ?></div>
+						</a>
+					<?php endif; ?>
 
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+						<div>
+							<h2>
+								<?php the_title(); ?>
+							</h2>
+							<span>
+								<?php echo CFS()->get( 'price' ); ?></span>
+							</span>
+						</div>
+				</div>
+				<?php endwhile; ?>
+		</section>
 
 		<?php endif; ?>
 
