@@ -15,6 +15,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<!-- section for 
+<!-- section for shop stuff -->
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
