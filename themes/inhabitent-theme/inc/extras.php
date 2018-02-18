@@ -46,3 +46,12 @@ add_filter('logo_headertitle', 'inhabitent_login_title');
 // if (! $image )  {
 // 	return;
 // }
+function archive_product_title($title) {
+	if(is_post_type_archive('product')) {
+		$title = 'Shop Stuff';
+	}elseif (is_tax('')) {
+		$title = single_term_title('', false);
+	}
+	return $title;
+}
+add_filter('get_the_archive_title', 'archive_product_title');
