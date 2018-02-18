@@ -46,6 +46,8 @@ add_filter('logo_headertitle', 'inhabitent_login_title');
 // if (! $image )  {
 // 	return;
 // }
+
+//This pull the product archive title //
 function archive_product_title($title) {
 	if(is_post_type_archive('product')) {
 		$title = 'Shop Stuff';
@@ -55,3 +57,13 @@ function archive_product_title($title) {
 	return $title;
 }
 add_filter('get_the_archive_title', 'archive_product_title');
+
+//This will pull the amount of product that will show //
+function inhabitent_limit_archive_posts($query) {
+	if($query->is_archive){
+		$query->set('posts_per_page', 16);
+		$query->set('order', 'ASC');
+	}
+	return $query;
+}
+add_filter('pre_get_posts', 'inhabitent_limit_archive_posts');
