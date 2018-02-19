@@ -60,7 +60,7 @@ get_header(); ?>
 				<div>
 					<p>
 						<?php the_date(); ?>
-						<?php $comments_count = wp_count_commments(); 
+						<?php $comments_count = wp_count_comments(); 
 						echo $comments_count->approved . "Comments" ?>
 					</p>
 
@@ -70,6 +70,10 @@ get_header(); ?>
 			</div>
 		<?php endforeach; wp_reset_postdata(); ?>
 	</div>
+</section>
+<!-- Adventure Section -->
+<section class="adventure">
+	
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
