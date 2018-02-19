@@ -35,7 +35,7 @@ function adventure_post_type() {
 		'label'                 => 'Adventure',
 		'description'           => 'For Adventure Page',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor' ),
+    'supports'              => array( 'title', 'editor','autho', 'thumbnail', 'revisions' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
