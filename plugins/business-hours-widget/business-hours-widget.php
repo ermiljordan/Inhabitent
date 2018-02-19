@@ -29,7 +29,7 @@ if ( ! defined ( 'ABSPATH' ) ) {
 }
 
 // TODO: change 'Widget_Name' to the name of your plugin
-class Widget_Name extends WP_Widget {
+class Tent_Biz_Hours extends WP_Widget {
 
     /**
      * @TODO - Rename "widget-name" to the name your your widget
