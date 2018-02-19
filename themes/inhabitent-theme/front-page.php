@@ -75,5 +75,5 @@ get_header(); ?>
 <section class="adventure">
 	<a href=<?php echo home_url().'/adventure_type' ?>>More adventure</a>
 </section>
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
