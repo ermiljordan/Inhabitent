@@ -67,3 +67,16 @@ function inhabitent_limit_archive_posts($query) {
 	return $query;
 }
 add_filter('pre_get_posts', 'inhabitent_limit_archive_posts');
+
+//This will pull the archive for DO EAT SLEEP and WEAR 
+function inhabitent_archive_title($title) {
+	if(is_category() ) {
+		$title = single_cat_title('', false);
+	} elseif (is_tag() ) {
+		$title = single_tag_title('', false);
+	} elseif (is_tag() ) {
+		$title = single_term_title('', false);
+	}
+	return $title;
+}
+add_filter ('get_the_archive_title', 'inhabitent_archive_title');
