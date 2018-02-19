@@ -73,7 +73,7 @@ get_header(); ?>
 </section>
 <!-- Adventure Section -->
 <section class="adventure">
-	
+	<a href=<?php echo home_url().'adventure' ?>>More adventure</a>
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
