@@ -16,7 +16,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <!-- section for shop stuff -->
-<section>
+<section class="shop-stuff">
 	<h2>Shop Stuff</h2>
 	<div>
 	<?php $terms = get_terms('product_type');
@@ -33,6 +33,42 @@ get_header(); ?>
 		<?php
 		}
 		?>
+	</div>
+</section>
+<!-- JOURNAL SECTION -->
+<section class="journal">
+	<h2>Inhabitent Journal</h2>
+	<div>
+		<?php 
+			$args = array(
+				'posts_per_page' 		=> 3,
+				'orderby'						=> 'date',
+				'order'							=> 'DESC',
+				'post_type'					=> 'post',
+				'post_status'				=> 'publish',
+				'suppress_filters' 	=> true
+			);
+			?>
+			<?php 
+				$product_posts = get_posts( $args );
+				?>
+				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
+
+			<div>
+				<?php the_post_thumbnail( '' ); ?>
+
+				<div>
+					<p>
+						<?php the_date(); ?>
+						<?php $comments_count = wp_count_commments(); 
+						echo $comments_count->approved . "Comments" ?>
+					</p>
+
+					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+					<a class="read-more" href="?php the_permalink(); ?>">Read entry</a>
+				</div>
+			</div>
+		<?php endforeach; wp_reset_postdata(); ?>
 	</div>
 </section>
 <?php get_sidebar(); ?>
