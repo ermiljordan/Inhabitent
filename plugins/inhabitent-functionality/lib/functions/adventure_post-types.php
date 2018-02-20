@@ -36,7 +36,6 @@ function adventure_post_type() {
 		'description'           => 'For Adventure Page',
 		'labels'                => $labels,
     'supports'              => array( 'title', 'editor','autho', 'thumbnail', 'revisions' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -50,6 +49,7 @@ function adventure_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
+		'show_in_rest'					=> true,
 	);
 	register_post_type( 'adventure_type', $args );
 

@@ -80,3 +80,9 @@ function inhabitent_archive_title($title) {
 	return $title;
 }
 add_filter ('get_the_archive_title', 'inhabitent_archive_title');
+
+function new_excerpt_more($more) {
+	global $post;
+	return ' [...]<br/><a class="moretag" href="'. get_permalink($post->ID) . '">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');

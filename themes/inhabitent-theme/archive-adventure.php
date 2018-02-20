@@ -34,7 +34,7 @@ get_header(); ?>
           </div>
         </div>
 			<?php endwhile; ?>
-      </section>
+</section>
 		<?php endif; ?>
 		</main>
 	</div>

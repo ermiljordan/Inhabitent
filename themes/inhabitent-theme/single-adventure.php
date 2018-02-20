@@ -28,7 +28,7 @@ get_header(); ?>
 			<?php the_content(); ?>
 			<?php 
 				wp_link_pages( array (
-					'before'	=>	'<div class="page-links">' . esc_html('adventure_type:'),
+					'before'	=>	'<div class="page-links">' . esc_html( 'Pages:' ),
 					'after'		=>	'</div>'
 				));
 				?>
@@ -39,7 +39,7 @@ get_header(); ?>
         </div>
 		</div>
 	</section>
-	</article>
+</article>
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
