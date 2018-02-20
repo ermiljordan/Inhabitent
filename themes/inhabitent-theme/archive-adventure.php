@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-    <?php query_posts( array( 'post_type' =>'adventure', 'orderby' => 'date', 'order' => 'ASC' ) ); ?>
+    <?php query_posts( array( 'post_type' =>'adventure_type', 'orderby' => 'date', 'order' => 'ASC' ) ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -25,7 +25,7 @@ get_header(); ?>
 				<div class="">
           <div class="">
             <?php if ( has_post_thumbnail() ) : ?>
-              <?php the_post_thumbnail( 'large' ); ?>
+              <?php the_post_thumbnail( 'full' ); ?>
             <?php endif; ?>
             <div class="">
               <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>

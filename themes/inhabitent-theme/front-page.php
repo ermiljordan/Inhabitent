@@ -73,6 +73,28 @@ get_header(); ?>
 </section>
 <!-- Adventure Section -->
 <section class="adventure">
+	<h2 class="">Latest Adventures</h2>
+		<?php 
+			$args = array( 'post_type' => 'adventure_type', 'orderby' => 'date', 'order' => 'ASC', 'numberposts' => '4' );	
+			$adventure_posts = get_posts( $args );
+		?>
+	<div class="">
+		<?php foreach( $adventure_posts as $post) : setup_postdata($post); ?>
+			<div id="post-<?php the_ID(); ?>" <?php post_class();?>>
+				<div class="thumbnail">
+					<?php if(has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail( 'large' ); ?>
+					<?php endif; ?>
+					<div class="">
+						<div class="entry-title">
+							<?php the_title(sprintf('<h3><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>'); ?>
+              <a href=<?php echo get_post_permalink() ?> class="">read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<?php endforeach; wp_reset_postdata(); ?>
 	<a href=<?php echo home_url().'/adventure_type' ?>>More adventure</a>
 </section>
 
