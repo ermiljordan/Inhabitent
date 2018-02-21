@@ -36,30 +36,51 @@ function inhabitent_login_logo() { ?>
 add_filter('login_enqueue_scripts', 'inhabitent_login_logo');
 add_filter('logo_headertitle', 'inhabitent_login_title');
 
-//This will show thr hero banner
-function inhabitent_hero_banners() {
-	switch(true) {
-		case is_page('About');
-		$urlAbout = CFS()->get('header_image');
-		$custom_css = "
-		.about-hero-banner{
-			background: url( {$urlAbout} ) no-repeat center bottom;
-			backgound-size: cover;
-		}";
-		case is_page('Home');
-		$urlHome = CFS()->get('');
-		$custom_css = "
-		.hero-banner{
-			
-		}";
-		break;
-		default:
-		$custom_css = "";
-		break;
+
+// function inhabitent_hero_banners() {
+// 	switch(true) {
+// 		// case is_page('Home');
+// 		// $urlHome = CFS()->get('');
+// 		// $custom_css = "
+// 		// .hero-banner{	
+// 		// }";
+// 		// break;
+// 		case is_page('About');
+// 		$urlAbout = CFS()->get('header_image');
+// 		$custom_css = "
+// 		.about-hero-banner{
+// 			background: 
+// 			linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url( {$urlAbout} ) no-repeat center bottom;
+// 			backgound-size: cover, cover;
+// 		}";
+
+// 		break;
+// 		default:
+// 		$custom_css = "";
+// 		break;
+// 	}
+// 	wp_add_inline_style('tent-style', $custom_css);
+// }
+// add_action( 'wp_enqueue_scripts', 'inhabitent_hero_banners');
+
+function inhabitent_dynamic_css() {
+	if ( ! is_page_template( 'page-template/about.php' ) ) {
+			return;
 	}
-	wp_add_inline_style('tent_style', $custom_css);
+	
+	$image = CFS()->get( 'header_image' );
+	if ( ! $image ) {
+			return;
+	}
+	$hero_css = ".about-hero-banner {
+			background:
+					linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ),
+					url({$image}) no-repeat center bottom;
+			background-size: cover, cover;
+	}";
+	wp_add_inline_style( 'tent-style', $hero_css );
 }
-add_action( 'wp_enqueue_scripts', 'inhabitent_hero_banners');
+add_action( 'wp_enqueue_scripts', 'inhabitent_dynamic_css' );
 
 
 //This pull the product archive title //

@@ -16,29 +16,29 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <!-- section for shop stuff -->
-<section class="shop-stuff">
+<section class="shop-stuff container">
 	<h2>Shop Stuff</h2>
-	<div>
-	<?php $terms = get_terms('product_type');
-		foreach ( $terms as $term ) {
-	?>
-	<?php 
-		$url = get_term_link($term->slug, 'product_type');
-	?>
-	<div class="hero-banner">
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/product-type-icons/<?php echo $term->slug ?>.svg">
-		<p><?php echo $term->description ?></p>
-		<p><a href="<?php echo $url ?>"><?php echo $term->name.''; ?></a></p>
-	</div>
-		<?php
-		}
+	<div class="shop-stuff-slug">
+		<?php $terms = get_terms('product_type');
+			foreach ( $terms as $term ) {
 		?>
+		<?php 
+			$url = get_term_link($term->slug, 'product_type');
+		?>
+		<div class="shop-stuff-thumbnail">
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/product-type-icons/<?php echo $term->slug ?>.svg">
+			<p><?php echo $term->description ?></p>
+			<p><a class="btn" href="<?php echo $url ?>"><?php echo $term->name.''; ?></a></p>
+		</div>
+			<?php
+			}
+			?>
 	</div>
 </section>
 <!-- JOURNAL SECTION -->
 <section class="journal">
 	<h2>Inhabitent Journal</h2>
-	<div>
+	<div class="journal-slug">
 		<?php 
 			$args = array(
 				'posts_per_page' 		=> 3,
@@ -54,7 +54,7 @@ get_header(); ?>
 				?>
 				<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 
-			<div>
+			<div class="journal-thumbnail">
 				<?php the_post_thumbnail( '' ); ?>
 
 				<div>
