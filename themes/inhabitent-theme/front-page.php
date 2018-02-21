@@ -25,7 +25,7 @@ get_header(); ?>
 	<?php 
 		$url = get_term_link($term->slug, 'product_type');
 	?>
-	<div>
+	<div class="hero-banner">
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/product-type-icons/<?php echo $term->slug ?>.svg">
 		<p><?php echo $term->description ?></p>
 		<p><a href="<?php echo $url ?>"><?php echo $term->name.''; ?></a></p>

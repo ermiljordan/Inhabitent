@@ -36,16 +36,31 @@ function inhabitent_login_logo() { ?>
 add_filter('login_enqueue_scripts', 'inhabitent_login_logo');
 add_filter('logo_headertitle', 'inhabitent_login_title');
 
-// THIS WILL PULL THE IMAGE ON THE FRONT PAGE
-// function inhabitent_hero_banner() {
-// 	if ( ! is_page_templates ( 'front-page.php ') ) {
-// 		return;
-// 	}
-// }
-// $image = CFS() ->get( 'hero_banner' );
-// if (! $image )  {
-// 	return;
-// }
+//This will show thr hero banner
+function inhabitent_hero_banners() {
+	switch(true) {
+		case is_page('About');
+		$urlAbout = CFS()->get('header_image');
+		$custom_css = "
+		.about-hero-banner{
+			background: url( {$urlAbout} ) no-repeat center bottom;
+			backgound-size: cover;
+		}";
+		case is_page('Home');
+		$urlHome = CFS()->get('');
+		$custom_css = "
+		.hero-banner{
+			
+		}";
+		break;
+		default:
+		$custom_css = "";
+		break;
+	}
+	wp_add_inline_style('tent_style', $custom_css);
+}
+add_action( 'wp_enqueue_scripts', 'inhabitent_hero_banners');
+
 
 //This pull the product archive title //
 function archive_product_title($title) {
