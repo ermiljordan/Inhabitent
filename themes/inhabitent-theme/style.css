@@ -709,14 +709,46 @@ object {
   margin-right: auto;
   width: 1120px; }
 
-.home .journal-slug {
+.home
+.journal .thumbnail-box {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0; }
 
-.home .journal-thumbnail {
-  border: 1px solid #e1e1e1; }
+.home
+.journal .thumbnail-box-list {
+  border: 1px solid #e1e1e1;
+  -ms-flex: 0 1 32%;
+  flex: 0 1 32%;
+  position: relative; }
+
+.home
+.journal .thumbnail-journal {
+  background-color: #e1e1e1;
+  height: 250px;
+  overflow: hidden;
+  position: relative; }
+
+.home
+.journal .wp-post-image {
+  position: absolute;
+  max-width: none;
+  height: 250px;
+  width: auto; }
+
+.home
+.journal .post-info {
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: .75rem; }
 
 .home .header-background {
   background: rgba(255, 255, 255, 0.8);

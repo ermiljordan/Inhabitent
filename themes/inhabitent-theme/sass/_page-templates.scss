@@ -53,12 +53,40 @@
   width: 1120px;
 }
 // end of global.scss
-.home {
-    .journal-slug {
-    display: flex;
-    justify-content: space-between;
+.home
+.journal {
+
+ .thumbnail-box {
+   display: flex;
+   justify-content: space-between;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
   }
-  .journal-thumbnail {
+  .thumbnail-box-list {
     border: 1px solid #e1e1e1;
+    -webkit-flex: 0 1 32%;
+    -ms-flex: 0 1 32%;
+    flex: 0 1 32%;
+    position: relative;
+  }
+  .thumbnail-journal {
+    background-color: #e1e1e1;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  .wp-post-image {
+    position: absolute;
+    max-width: none;
+    height: 250px;
+    width: auto;
+  }
+  .post-info {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem;
   }
 }
