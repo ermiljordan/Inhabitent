@@ -52,6 +52,10 @@
   margin-right: auto;
   width: 1120px;
 }
+.black-btn {
+  border: 1px solid #000;
+  color: #000;
+}
 // end of global.scss
 .home
 .journal {
@@ -88,5 +92,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: .75rem;
+  }
+  .black-btn {
+    position: absolute;
+    bottom: .75rem;
+    left: .75rem;
   }
 }

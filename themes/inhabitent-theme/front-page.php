@@ -54,9 +54,9 @@ get_header(); ?>
 				<?php	$product_posts = get_posts( $args );?>
 					<?php foreach ( $product_posts as $post ) : setup_postdata( $post ); ?>
 					<li class="thumbnail-box-list">
-				
-					<?php the_post_thumbnail( 'medium' ); ?>
 					<div class="thumbnail-journal">
+					<?php the_post_thumbnail( 'medium' ); ?>
+					</div>
 					<div class="post-info">
 						<p>
 							<?php the_date(); ?>
@@ -65,9 +65,8 @@ get_header(); ?>
 						</p>
 					
 						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<a class="read-more" href="?php the_permalink(); ?>">Read entry</a>
+						<a class="black-btn" href="?php the_permalink(); ?>">Read entry</a>
 					</div>
-				</div>
 			<?php endforeach; wp_reset_postdata(); ?>
 				</li>
 			</ul>

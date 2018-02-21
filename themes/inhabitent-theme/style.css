@@ -709,6 +709,10 @@ object {
   margin-right: auto;
   width: 1120px; }
 
+.black-btn {
+  border: 1px solid #000;
+  color: #000; }
+
 .home
 .journal .thumbnail-box {
   display: -ms-flexbox;
@@ -749,6 +753,12 @@ object {
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: .75rem; }
+
+.home
+.journal .black-btn {
+  position: absolute;
+  bottom: .75rem;
+  left: .75rem; }
 
 .home .header-background {
   background: rgba(255, 255, 255, 0.8);
