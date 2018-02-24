@@ -713,8 +713,7 @@ object {
   border: 1px solid #000;
   color: #000; }
 
-.home
-.journal .thumbnail-box {
+.home .journal .thumbnail-box {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -725,40 +724,91 @@ object {
   margin-right: 0;
   padding-left: 0; }
 
-.home
-.journal .thumbnail-box-list {
+.home .journal .thumbnail-box-list {
   border: 1px solid #e1e1e1;
   -ms-flex: 0 1 32%;
   flex: 0 1 32%;
   position: relative; }
 
-.home
-.journal .thumbnail-journal {
+.home .journal .thumbnail-journal {
   background-color: #e1e1e1;
   height: 250px;
   overflow: hidden;
   position: relative; }
 
-.home
-.journal .wp-post-image {
+.home .journal .wp-post-image {
   position: absolute;
   max-width: none;
   height: 250px;
   width: auto; }
 
-.home
-.journal .post-info {
+.home .journal .post-info {
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: .75rem; }
 
-.home
-.journal .black-btn {
+.home .journal .black-btn {
   position: absolute;
   bottom: .75rem;
   left: .75rem; }
+
+.adventure ul {
+  padding: 0;
+  margin-bottom: 2.5rem; }
+
+.adventure li {
+  width: 270px;
+  height: 270px;
+  margin-left: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  float: left; }
+  .adventure li:first-child {
+    width: 540px;
+    height: 540px;
+    margin: 0; }
+    .adventure li:first-child img {
+      min-height: 640px; }
+    .adventure li:first-child h3 {
+      font-size: 3rem; }
+  .adventure li:nth-child(2) {
+    width: 560px;
+    height: 250px;
+    margin: 0 0 20px 20px; }
+    .adventure li:nth-child(2) h3 {
+      font-size: 2.5rem; }
+
+.adventure .adventure-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.adventure img {
+  width: auto;
+  max-height: 400px;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -90%); }
+
+.adventure .headline {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 3rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+.adventure h3 {
+  font: 1.5rem sans-serif;
+  text-transform: none;
+  margin-bottom: 2.5rem; }
+
+.adventure .green-link a {
+  font-size: 1.1rem; }
 
 .home .header-background {
   background: rgba(255, 255, 255, 0.8);
