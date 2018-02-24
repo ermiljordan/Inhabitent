@@ -834,3 +834,17 @@ object {
 
 .main-navigation .page-item {
   padding-left: 5rem; }
+
+.blog .entry-header {
+  position: relative; }
+
+.blog .entry-title {
+  position: absolute;
+  top: 0;
+  background-color: #248a83;
+  color: #fff;
+  font-size: 2.1rem;
+  margin-top: 2.25rem;
+  padding: .75rem 1.5rem;
+  max-width: 75%;
+  left: 0; }
